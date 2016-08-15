@@ -14,9 +14,9 @@ def load_yml_filedir(path):
 
     if os.path.isfile(path):
         try:
-          return yaml.load(open(path))
+            return yaml.load(open(path))
         except:
-          return None
+            return None
   
     for e in os.listdir(path):
         epath = os.path.join(path, e)
