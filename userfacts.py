@@ -17,7 +17,7 @@ def load_yml_filedir(path):
             return yaml.load(open(path))
         except:
             return None
-  
+
     for e in os.listdir(path):
         epath = os.path.join(path, e)
         if os.path.isdir(epath):
