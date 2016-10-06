@@ -34,6 +34,10 @@ $ python -m 'nestedfacts' scratch
 }
 ```
 
+This project supports and is tested on both, python 2 and 3. Since
+ansible just calls the file as an exectuable, the usual python2-
+restriction does not apply.
+
 ## Usage
 
 By default the script loads yml from the current directory. There are
