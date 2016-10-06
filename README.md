@@ -120,3 +120,14 @@ The only file in this directory needed in production is `userfacts.py`.
 Copy, clone or simlink it into your `/etc/ansible/facts.d/preferences.fact`-
 directory using your favourte deployment tool. Please note that this
 script needs the [`pyyaml`-module](http://pyyaml.org) to work.
+
+### PyPI
+
+Assuming you have been handed the required credentials, the package on
+PyPI can be updated like this:
+
+```
+rm dist/*
+python setup.py sdist bdist_wheel
+twine upload dist/*
+```
