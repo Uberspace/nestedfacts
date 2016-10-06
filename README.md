@@ -56,7 +56,7 @@ executable-rights for ansible to include it.
 
 There are a few scenarios where a file cannot be loaded.
 
-1. It contains invalid yml. In this case, the key is present, but set to
+* It contains invalid yml. In this case, the key is present, but set to
 `null`:
 
 ```
@@ -75,7 +75,7 @@ $ python -m 'nestedfacts' invalid_file
 }
 ```
 
-2. non-yml-files. When the script encounters something, that does not
+* non-yml-files. When the script encounters something, that does not
 end in `.yml`, the file is ignored completely:
 
 ```
@@ -90,9 +90,9 @@ $ python -m 'nestedfacts' nonyaml_dir/
 }
 ```
 
-3. In case the provided root is missing `{}` is returned.
+* In case the provided root is missing `{}` is returned.
 
-4. In case a non-yml-file is provided as the root `null` is returned.
+* In case a non-yml-file is provided as the root `null` is returned.
 
 ## Development
 
