@@ -4,9 +4,10 @@ Ansible supports having [a directory of variables](http://docs.ansible.com/ansib
 which are loaded for every task. These facts cannot be nested in any way,
 limiting their usefullness.
 
-This script can be placed in `/etc/ansible/facts.d/` to load additional
-facts. It supports loading yml from a nested directory structure as
-shown below.
+To combat this, `nestedfacts` implements loading a nested
+directory structure containing yml files. A quick example
+is show below. Refer to "Usage" for a deeper explaination
+and more ways to integrate this library with ansible.
 
 ```
 $ tree scratch
