@@ -57,7 +57,7 @@ dump_yml_filedir('/etc/ansible/fancyfacts')
 Please note that the file needs to be named `<something>.fact` and needs
 executable-rights for ansible to include it.
 
-## Errors
+## Invalid Input
 
 There are a few scenarios where a file cannot be loaded.
 
