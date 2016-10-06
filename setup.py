@@ -1,7 +1,13 @@
 from setuptools import setup
 
 setup(name='nestedfacts',
-      version='0.1',
+      description='This library enables users of Ansible to load nested'
+                  'directories as local facts. Refer to the README for'
+                  'more details.',
+      author='uberspace.de',
+      author_email='hallo@uberspace.de',
+      url='https://github.com/uberspace/nestedfacts',
+      version='0.2.0',
       license='MIT',
       packages=['.'],
       zip_safe=True,
