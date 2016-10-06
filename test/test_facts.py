@@ -2,10 +2,7 @@ import os.path
 
 import pytest
 
-import userfacts
-
-
-DEFAULT_VAL = '_______dd'
+import nestedfacts
 
 
 @pytest.mark.parametrize("inputfile,expected", [
@@ -13,10 +10,10 @@ DEFAULT_VAL = '_______dd'
     ('simple_dir', {'foo': 5, 'bar': 7}),
     ('nested_dir', {'foo': 5, 'bar': {'nesting': 'is awesome', 'or': ['is', 'it?']}}),
     ('invalid_file', {'foo': 42, 'invalid': None}),
-    ('nonyaml_dir', {'foo': 43, 'somethingelse': {}}),
-    ('nonyaml_file', DEFAULT_VAL),
-    ('___doesnotexist', DEFAULT_VAL),
+    ('nonyaml_dir', {'foo': 43}),
+    ('nonyaml_file', None),
+    ('___doesnotexist', {}),
 ])
 def test_single_file(inputfile, expected):
-    data = userfacts.load_yml_filedir(os.path.join(os.path.dirname(__file__), 'data', inputfile), DEFAULT_VAL)
+    data = nestedfacts.load_yml_filedir(os.path.join(os.path.dirname(__file__), 'data', inputfile))
     assert data == expected
