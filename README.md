@@ -18,17 +18,17 @@ scratch
         └── domains.yml
 
 $ pip install nestedfacts
-$ python -m 'nestedfacts' scratch 
+$ python -m 'nestedfacts' scratch
 {
   "someone": {
     "webserver": {
       "domains": [
-        "google.com", 
+        "google.com",
         "yolo.org"
       ]
     }, 
     "ports": {
-      "55552": "both", 
+      "55552": "both",
       "62250": "tcp"
     }
   }
