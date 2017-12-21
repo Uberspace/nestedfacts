@@ -12,7 +12,7 @@ import nestedfacts
     ('invalid_file', {'foo': 42, 'invalid': None}),
     ('nonyaml_dir', {'foo': 43}),
     ('nonyaml_file', None),
-    ('___doesnotexist', {}),
+    ('___doesnotexist', None),
 ])
 def test_single_file(inputfile, expected):
     data = nestedfacts.load_yml_filedir(os.path.join(os.path.dirname(__file__), 'data', inputfile))

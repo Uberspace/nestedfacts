@@ -11,7 +11,6 @@ def _load_yml_filedir(path):
     """
     Internal function. Do not use.
     Loads all YML-files from the given directory, recursively.
-    This function excepts the path to exist.
     """
     YML_FILE_SUFFIX = '.yml'
     bpath = os.path.basename(path)
@@ -42,15 +41,14 @@ def _load_yml_filedir(path):
               return bpath, None
         else:
           return None, None
-
+    else:  # not a normal file or not existant
+        return None, None
 
 
 def load_yml_filedir(root_dir):
     """ load the given directory and return the data as a dict """
-    if os.path.exists(root_dir):
-        return _load_yml_filedir(root_dir)[1]
-    else:
-        return {}
+    data = _load_yml_filedir(root_dir)[1]
+    return data
 
 
 def dump_yml_filedir(root_dir):
