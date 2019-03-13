@@ -36,7 +36,7 @@ def _load_yml_filedir(path):
           bpath = bpath[:-len(YML_FILE_SUFFIX)]
 
           try:
-              return bpath, yaml.load(open(path))
+              return bpath, yaml.safe_load(open(path))
           except:
               return bpath, None
         else:
